@@ -1,0 +1,31 @@
+!DOCTYPE html
+<html>
+	<head>
+		<title>Conversor</title>
+		<script>
+			function converterInputDecimalEmBinario(){
+				var inputElement = document.getElementById('input')
+				var decimalValue = inputElement.value
+				console.log('decimalValue: '+decimalValue)
+				var binarioValue = decimalValue.toString(2)
+				return binarioValue
+						}
+			function editarInputDeResposta(binarioValue){
+				var ResponseElement = document.getElementById('Resposta')
+				ResponseElement.value = binarioValue
+						}
+			function converter(){
+				var binarioValue = converterInputDecimalEmBinario()
+				editarInputDeResposta(binarioValue)
+						}
+						
+		</script>
+	</head>
+	<body>
+		<h1>Conversor</h1>
+		<p>Converte numeros decimais em binarios.</p>
+		<input name='input' id='input' type='text'>
+		<input name='Resposta' id='Resposta' type='text'>
+		<button onclick='converter()'>Converter</button>
+	</body>
+</html>
