@@ -1,11 +1,11 @@
-!DOCTYPE html
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Conversor</title>
 		<script>
 			function converterInputDecimalEmBinario(){
 				var inputElement = document.getElementById('input')
-				var decimalValue = inputElement.value
+				var decimalValue = new Number(inputElement.value)
 				console.log('decimalValue: '+decimalValue)
 				var binarioValue = decimalValue.toString(2)
 				return binarioValue
