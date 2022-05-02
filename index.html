@@ -2,14 +2,25 @@
 <html lang='pt-br'>
 	<head>
 		<title>Conversor</title>
-		<link src="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<meta charset="utf-8">
+		<meta name="author" content="Diogo Falqueto">
+		<meta name="description" content="Conversor de numeros decimais para binarios.">
+		<meta name="keywords" content="binario, decimal, conversor, online">
 	</head>
 	<body>
-		<div class='center'>
+		<div id='center'>
 			<h1>Conversor</h1>
 			<p>Converte numeros decimais em binarios.</p>
-			<input name='input' id='input' type='text'>
-			<input name='Resposta' id='Resposta' type='text'>
+			<label for="input">Decimal:</label>
+			<input name='input' id="input" class="text-input" type='text'>
+			<div id="base">
+				<label><input type="radio" class="base" id="binario" name="base" value="2">Binario</label>
+				<label><input type="radio" class="base" id="octal" name="base" value="8">Octal</label>
+				<label><input type="radio" class="base" id="hexadecimal" name="base" value="16">Hexadecimal</label>
+			</div>
+			<label for="output">Resultado:</label>
+			<input name='output' id="output" class="text-input" type='text' disabled>
 			<button onclick='start()'>Converter</button>
 		</div>
 		<script src="js/conversor.js"></script>
