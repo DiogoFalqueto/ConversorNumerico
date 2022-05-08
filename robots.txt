@@ -1,0 +1,4 @@
+Uesr-Agent: *
+Allow: */*
+
+Sitemap: https://diogofalqueto.github.io/ConversorNumerico/sitmap.xml
