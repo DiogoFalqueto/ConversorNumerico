@@ -1,5 +1,6 @@
 # ConversorNumerico
 
-<h2>conversor de numeros decimais, binarios, octal e hexadecimal.</h2>
+Esse site converte numeros decimais, binarios, octais e hexadecimais.
+Esse site foi criado como um projeto de estudo. Se ele te ajudou em alguma coisa, fico feliz.
 
-<h3>Site: https://diogofalqueto.github.io/ConversorNumerico/</h3>
+Site: https://diogofalqueto.github.io/ConversorNumerico/

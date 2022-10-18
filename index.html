@@ -1,28 +1,76 @@
 <!DOCTYPE html>
-<html lang='pt-br'>
-	<head>
-		<title>Conversor</title>
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<meta charset="utf-8">
-		<meta name="author" content="Diogo Falqueto">
-		<meta name="description" content="Conversor de numeros decimais para binarios.">
-		<meta name="keywords" content="binario, decimal, conversor, online">
-	</head>
-	<body>
-		<div id='center'>
-			<h1>Conversor</h1>
-			<p>Converte numeros decimais em binarios.</p>
-			<label for="input">Decimal:</label>
-			<input name='input' id="input" class="text-input" type='text'>
-			<div id="base">
-				<label><input type="radio" class="base" id="binario" name="base" value="2">Binario</label>
-				<label><input type="radio" class="base" id="octal" name="base" value="8">Octal</label>
-				<label><input type="radio" class="base" id="hexadecimal" name="base" value="16">Hexadecimal</label>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="css/style.css">
+    <title>Conversor</title>
+  </head>
+  <body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand" href="/">Conversor</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+			  <ul class="navbar-nav">
+				<li class="nav-item active">
+				  <a class="nav-link" href="/">Home</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="/sobre.html">Sobre</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="https://github.com/DiogoFalqueto">GitHub</a>
+				</li>
+			  </ul>
 			</div>
-			<label for="output">Resultado:</label>
-			<input name='output' id="output" class="text-input" type='text' disabled>
-			<button onclick='start()'>Converter</button>
-		</div>
-		<script src="js/conversor.js"></script>
-	</body>
+		  </nav>
+	</header>
+
+	<div class="conversor">
+		<h1 class="h1">Conversor</h1>
+		<form>
+			<div class="form-group">
+			  <label for="input">Numeroa ser convertido</label>
+			  <input type="text" class="form-control" id="input" placeholder="Numero">
+			  </div>
+			  <div class="form-group">
+				<label for="FormControlSelectInput">Selecione o tipo da entrada</label>
+				<select class="form-control" id="FormControlSelectInput">
+				  <option>Binario</option>
+				  <option>Octal</option>
+				  <option>Decimal</option>
+				  <option>Hexadecimal</option>
+				</select>
+			  <div class="form-group">
+				<label for="FormControlSelectOutput">Selecione o tipo do resultado</label>
+				<select class="form-control" id="FormControlSelectOutput">
+				  <option>Binario</option>
+				  <option>Octal</option>
+				  <option>Decimal</option>
+				  <option>Hexadecimal</option>
+				</select>
+			  </div>
+			<div class="form-group">
+			  <label for="output">Resultado</label>
+			  <input type="text" class="form-control" id="output" readonly>
+			</div>
+			<button type="button" class="btn btn-primary" onclick="start()">Converter</button>
+		</form>
+	</div>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="js/conversor.js"></script>
+  </body>
 </html>

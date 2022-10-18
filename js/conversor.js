@@ -1,30 +1,28 @@
+const baseName = {
+	"Binario": 2,
+	"Decimal": 10,
+	"Octal": 8,
+	"Hexadecimal": 16
+}
+
 function start(){
-	var inputValue = getInput()
-	var base = getBaseChecked()
-	var returnValue = converter(inputValue, base)
-	setOutput(returnValue)
+	const inputInt = getInput()
+	const outputBase = getBaseOutput()
+	const output = converter(inputInt, outputBase)
+	setOutput(output)
 	}
 
 function getInput(){
-	var inputElement = document.getElementById('input')
-	var decimalValue = new Number(inputElement.value)
-	//console.log('Input Value: '+decimalValue)
-	return decimalValue
+	const inputNumber = document.getElementById('input').value
+	const inputBaseName = document.getElementById("FormControlSelectInput").value
+	const inputBase = baseName[inputBaseName]
+	
+	return Number.parseInt(inputNumber, inputBase)
 	}
 
-function getBaseChecked(){
-	var binario = document.getElementById("binario")
-	var octal = document.getElementById("octal")
-	var hexadecimal = document.getElementById("hexadecimal")
-	var checked
-	if(binario.checked){
-		checked = binario
-	}else if(octal.checked){
-		checked = octal
-	}else if(hexadecimal.checked){
-		checked = hexadecimal
-	}
-	return checked.value
+function getBaseOutput(){
+	const outputBaseName = document.getElementById("FormControlSelectOutput").value
+	return baseName[outputBaseName]
 }
 
 function converter(value, base){
@@ -32,7 +30,7 @@ function converter(value, base){
 	}
 
 function setOutput(returnValue){
-	var OutputElement = document.getElementById('output')
+	const OutputElement = document.getElementById('output')
 	OutputElement.value = returnValue
 	}
 
